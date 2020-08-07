@@ -14,10 +14,12 @@ export class ListComponent implements OnInit {
   constructor(private librosService:LibrosService, private router:Router) { }
 
   ngOnInit(): void {
+    this.listarLibros();
   }
 
   listarLibros(){
-    this.librosService.getListarLibros().subscribe(data=>{
+    this.librosService.getListarLibros()
+    .subscribe(data=>{
       this.libros=data;
     })
   }

@@ -13,12 +13,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor="let libro of libros">
+                <td>{{libro.idlibro}}</td>
+                <td>{{libro.nombre}}</td>
+                <td>{{libro.nombre_autor}}</td>
+                <td>{{libro.editorial}}</td>
+                <td>{{libro.fecha_lanzamiento}}</td>
             </tr>
         </tbody>
     </table>

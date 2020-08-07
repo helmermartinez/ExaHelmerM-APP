@@ -7,10 +7,10 @@ import { Libros} from '../models/libros';
   providedIn: 'root'
 })
 export class LibrosService {
-  private url='';
+  private url='http://localhost:8080';
 
   constructor(private http:HttpClient) { }
   getListarLibros(){
-    return this.http.get<Libros[]>(this.url+'/all');
+    return this.http.get<Libros[]>(this.url+'/libro');
   }
 }
